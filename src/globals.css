@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/* ------------------- */
+/* Globals             */
+/* ------------------- */
+:root {
+  --ff: 'DM sans', sans-serif;
+  --s: 8px;
+  --main-accent: #ff8743;
+  --hover-accent: #ffca43;
+
+  --blue: #4e66bd;
+  --yellow:#f9ea62;
+  --orange: #f9b462;
+  --red: #f96262;
+}
+
+h1,h2,h3,input,a,p,body {
+  font-family: var(--ff);
+}
+
+h1 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.17;
+}
+h2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 4.17;
+}
+h3 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+
+p {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+
+section {
+  margin-left: 196px;
+  margin-right: 196px;
+}
+div {
+  display: block;
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+.button-text {
+  font-size: 20px;
+  font-weight: 800;
+}
+.button-outline {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 32px;
+  border: 2px solid black;
+  width: 202px;
+}
+
+.button-filled {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 32px;
+  width: 182px;
+  background-color: black;
+  color: white;
+}
+
+.link {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.copyright {
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 2.5px;
+  text-align: center;
+}
+
+/* ------------------- */
+/* Resets              */
+/* ------------------- */
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0; 
+}
+
+p {
+  font-weight: 400;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+*,
+*::before,
+*::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+}
