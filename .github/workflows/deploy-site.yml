@@ -1,5 +1,5 @@
 # This script deploys your website automatically
-name: CD
+name: Build and Deploy 
 
 # Only trigger this script when you push to the master branch
 on:
@@ -11,19 +11,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Download our master branch
     steps:
-    - uses: actions/checkout@v2
-    - name: Install modules
-      run: npm install
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
 
-    # Configure Git Identity
-    - name: Configure Git Identity
-      run: git config --global user.email "deany.y.ca@gmail.com" && git config --global user.name "nekopudding"
-    # Run our deployment command
-    - name: Deploying the static website to gh-pages
-      run: npm run deploy
+    - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      run: |
+        npm ci
+        npm run build
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        folder: build # The folder the action should deploy.
