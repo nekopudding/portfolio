@@ -1,0 +1,17 @@
+.footer {
+  margin-bottom: 48px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  user-select: none;
+  opacity: 0.5;
+}
+
+.links > a + a {
+  margin-top: 16px;
+}

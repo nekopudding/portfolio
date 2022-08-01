@@ -46,11 +46,29 @@ p {
 }
 
 section {
-  margin-left: 196px;
-  margin-right: 196px;
+  padding-left: 196px;
+  padding-right: 196px;
 }
 div {
   display: block;
+}
+
+a {
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+}
+h1,a {
+  user-select: none;
+}
+
+@media (any-hover: hover) {
+  a:hover {
+    opacity: 0.5;
+  }
 }
 
 /* ------------------- */
@@ -84,13 +102,6 @@ div {
   color: white;
 }
 
-.link {
-  font-size: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  display: inline-block;
-}
-
 .flex {
   display: flex;
 }
@@ -98,17 +109,6 @@ div {
 .stack {
   display: flex;
   flex-direction: column;
-}
-
-.faded {
-  opacity: 0.5;
-}
-
-.copyright {
-  font-size: 20px;
-  line-height: 36px;
-  letter-spacing: 2.5px;
-  text-align: center;
 }
 
 /* ------------------- */
@@ -138,6 +138,7 @@ p {
   font-weight: 400;
 }
 
+
 /* make form elements easier to work with */
 input,
 button,
@@ -156,4 +157,16 @@ select {
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
 }
+}
+@media (max-width: 1200px) {
+  section {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (max-width: 600px) {
+  section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
