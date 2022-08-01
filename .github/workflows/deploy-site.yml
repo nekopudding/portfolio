@@ -14,10 +14,12 @@ jobs:
     # Download our master branch
     steps:
     - uses: actions/checkout@v2
-
     - name: Install modules
       run: npm install
 
+    # Configure Git Identity
+    - name: Configure Git Identity
+      run: git config --global user.email "deany.y.ca@gmail.com" && git config --global user.name "nekopudding"
     # Run our deployment command
     - name: Deploying the static website to gh-pages
       run: npm run deploy
