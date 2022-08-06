@@ -1,0 +1,38 @@
+.section {
+  padding-top: 18px;
+  margin-top: 54px;
+  margin-bottom: 164px;
+}
+
+.aboutContainer {
+  height: 745px;
+}
+.aboutContainer > * + * {
+  margin-left: 83px;
+}
+
+.aboutImg {
+  height: 100%;
+  max-width: 50%;
+  object-fit: cover;
+}
+.aboutTextBlock {
+  justify-content: end;
+}
+.sectionTitle {
+  text-align: right;
+  margin-bottom: 45px;
+}
+.sectionText > * + * {
+  margin-top: 36px;
+}
+.text {
+  text-align: right;
+}
+
+.buttonContainer {
+  margin-top: 58px;
+  margin-bottom: 42px;
+  display: flex;
+  justify-content: end;
+}
