@@ -1,0 +1,40 @@
+.section {
+  padding-top: 80px;
+  margin-bottom: 164px;
+}
+
+.container {
+  border: 4px solid black;
+  position: relative;
+  padding: 45px 66px;
+  align-items: center;
+}
+.container > * + * {
+  margin-left: 66px;
+}
+.sectionTitle {
+  text-align: right;
+  margin-bottom: 28px;
+}
+.projectTitle {
+  margin-bottom: 28px;
+  text-align: right;
+}
+.projectText {
+  text-align: right;
+}
+.projectText > * + * {
+  margin-top: 36px;
+}
+
+.imgContainer {
+  flex: 0 0 448px;
+  overflow: hidden;
+}
+.img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+
+
