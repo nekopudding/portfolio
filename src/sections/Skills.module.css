@@ -1,0 +1,58 @@
+.section {
+  padding-top: 80px;
+  margin-bottom: 164px;
+}
+
+.container {
+  position: relative;
+}
+.container > * + * {
+  margin-left: 83px;
+}
+
+.sectionTextBlock {
+}
+.sectionTitle {
+  margin-bottom: 45px;
+}
+.sectionText > * + * {
+  margin-top: 36px;
+}
+
+.skillbarContainer {
+  padding-top: 86px;
+  height: 100%;
+  flex: 0 0 484px;
+}
+
+.skillbarContainer > * + * {
+  margin-top: 64px;
+}
+.skillbar {
+  align-items: flex-end;
+}
+.skillbar > * + * {
+  margin-top: 10px;
+}
+
+.bar {
+  height: 12px;
+}
+.frontend {
+  width: 100%;
+  background-color: var(--blue);
+}
+
+.reactJs {
+  width: 86%;
+  background-color: var(--yellow);
+}
+.backend {
+  width: 68%;
+  background-color: var(--orange);
+}
+.testing {
+  width: 51%;
+  background-color: var(--red);
+}
+

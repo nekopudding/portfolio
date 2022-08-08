@@ -1,22 +1,27 @@
 .section {
   padding-top: 18px;
   margin-top: 54px;
-  margin-bottom: 164px;
+  margin-bottom: 144px;
 }
 
-.aboutContainer {
+.container {
   height: 745px;
 }
-.aboutContainer > * + * {
+.container > * + * {
   margin-left: 83px;
 }
-
-.aboutImg {
+.imgContainer {
+  flex: 0 0 484px;
   height: 100%;
-  max-width: 50%;
+  overflow: hidden;
+}
+.img {
+  display: block;
+  height: 100%;
   object-fit: cover;
 }
-.aboutTextBlock {
+.textBlock {
+  flex: 1 1 1;
   justify-content: flex-end;
 }
 .sectionTitle {
