@@ -1,0 +1,88 @@
+.carousel {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.carouselTrack {
+  overflow-x: hidden;
+}
+.slide {
+  /* position: absolute;
+  top: 0;
+  bottom: 0; */
+  width: 100%;
+  border: 4px solid black;
+  padding: 45px 66px;
+  align-items: center;
+}
+.slide > * + * {
+  margin-left: 66px;
+}
+.slideTitle {
+  margin-bottom: 28px;
+  text-align: right;
+}
+.slideText {
+  text-align: right;
+}
+.slideText > * + * {
+  margin-top: 36px;
+}
+
+.imgContainer {
+  flex: 0 0 448px;
+  overflow: hidden;
+}
+.img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.arrow:hover {
+  opacity: 0.7;
+}
+.arrow:active {
+  opacity: 0.5;
+}
+
+.arrowLeft {
+  left: -100px;
+}
+
+.arrowRight {
+  right: -100px;
+}
+
+.carouselNav {
+  position: absolute;
+  left: 50%;
+  bottom: -36px;
+  display: flex;
+  justify-content: center;
+}
+.carouselNav > * + * {
+  margin-left: 12px;
+}
+.slideIndicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  opacity: 0.3;
+}
+.slideIndicator:hover {
+  opacity: 0.4;
+}
+.slideIndicator:active,.slideIndicatorCurr {
+  opacity: 0.6 !important;
+}
