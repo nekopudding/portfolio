@@ -13,7 +13,7 @@ function About() {
         <div className={` stack ${styles.textBlock}`}>
           <h2 className={styles.sectionTitle}>{aboutSection.title}</h2>
           <div className={styles.sectionText}>
-            {aboutSection.text.map(t => <p className={styles.text}>{t}</p>)}
+            {aboutSection.text.map(t => <p key={t} className={styles.text}>{t}</p>)}
           </div>
           <div className={styles.buttonContainer}>
             <button className={`button-text button-outline`}>

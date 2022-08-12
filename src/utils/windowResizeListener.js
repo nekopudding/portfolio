@@ -9,3 +9,13 @@ export function windowResizeListener(callback900) {
     }
   })
 }
+
+/**
+ * Run callback every time the window is resized
+ * @param {*} callback 
+ */
+export function windowAnyResizeListener(callback) {
+  window.addEventListener('resize',() => {
+    callback();
+  })
+}

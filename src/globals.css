@@ -148,6 +148,10 @@ p {
   font-weight: 400;
 }
 
+img {
+  user-select: none;
+}
+
 
 /* make form elements easier to work with */
 input,

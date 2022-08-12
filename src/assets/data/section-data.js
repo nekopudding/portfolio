@@ -33,7 +33,17 @@ const projectsSection = {
         "Project Mnemosyne is a 2D adventure platforming game created in UBC Game Dev 2021. You play as a crew member in a deserted spaceship.",
         "As an astronaut, you navigate through the dangerous surroundings with the use of grappling hooks, and travel through an unfamiliar planet, attempting to rebuild your spaceship and piece together your missing memories."
       ],
-      image: mnemosyne
+      image: mnemosyne,
+      link: null
+    },
+    {
+      id: "markdown",
+      title: "Markdown Editor",
+      text: [
+        "This was made as a personal project to improve my control over JS."
+      ],
+      image: null,
+      link: "https://nekopudding.github.io/in-browser-markdown-editor/"
     }
   ]
 }

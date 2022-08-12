@@ -10,7 +10,7 @@ function Skills() {
           <div>
             <h2 className={styles.sectionTitle}>{skillsSection.title}</h2>
             <div className={styles.sectionText}>
-              {skillsSection.text.map(t => <p>{t}</p>)}
+              {skillsSection.text.map(t => <p key={t}>{t}</p>)}
             </div>
           </div>
           <div className={styles.skillbarContainer}>
