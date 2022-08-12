@@ -92,7 +92,7 @@ function Carousel({
               {
                 s.link &&
                 <div className={styles.linkContainer}>
-                  <a className={styles.link} href={s.link} target="_blank" rel="noopener noreferrer">Learn More</a>
+                  <a className={styles.link} href={s.link} target="_blank" rel="noopener noreferrer">View Project</a>
                 </div>
               }
             </div>

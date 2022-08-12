@@ -19,6 +19,7 @@
   padding: 45px 66px;
   align-items: center;
   transition: opacity 250ms ease-in-out;
+  justify-content: space-between;
 }
 .slide > * + * {
   margin-left: 66px;
@@ -36,7 +37,7 @@
 }
 
 .imgContainer {
-  flex: 0 0 448px;
+  flex: 0 0 45%;
   overflow: hidden;
 }
 .img {
@@ -78,6 +79,7 @@
 .carouselNav {
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
   bottom: -36px;
   display: flex;
   justify-content: center;
