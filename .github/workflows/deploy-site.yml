@@ -1,11 +1,12 @@
 # This script deploys your website automatically
 name: Build and Deploy 
 
+env:
+  CI: ""
+
 # Only trigger this script when you push to the master branch
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
 # Specify the tasks to run when this script gets triggered
@@ -21,7 +22,10 @@ jobs:
       run: |
         npm ci
         npm run build
+  deploy:
+    runs-on: ubuntu-latest
 
+    steps:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
