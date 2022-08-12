@@ -1,5 +1,6 @@
 import about from '../images/about.jpg'
 import mnemosyne from '../images/mnemosyne.png'
+import markdown from '../images/markdown.png'
 
 const aboutSection = {
   id: "about",
@@ -29,9 +30,10 @@ const projectsSection = {
     {
       id: "mnemosyne",
       title: "Project Mnemosyne",
+      date: 'May 2022',
       text: [
-        "Project Mnemosyne is a 2D adventure platforming game created in UBC Game Dev 2021. You play as a crew member in a deserted spaceship.",
-        "As an astronaut, you navigate through the dangerous surroundings with the use of grappling hooks, and travel through an unfamiliar planet, attempting to rebuild your spaceship and piece together your missing memories."
+        "Project Mnemosyne is a 2D adventure platforming game created in UBC Game Dev 2021/2022. You play as a crew member in an abandonned spaceship.",
+        "As an astronaut, you navigate through the dangerous surroundings with the use of grappling hooks and travel through an unfamiliar planet. You must rebuild your spaceship and piece together your missing memories to uncover the mysteries behind your missing crewmates."
       ],
       image: mnemosyne,
       link: null
@@ -39,10 +41,11 @@ const projectsSection = {
     {
       id: "markdown",
       title: "Markdown Editor",
+      date: 'Jun 2022',
       text: [
-        "This was made as a personal project to improve my control over JS."
+        "This is an in-browser markdown editor created with ReactMarkdown. It was done as a personal project using the design from Frontend Mentor to improve my control over JS."
       ],
-      image: null,
+      image: markdown,
       link: "https://nekopudding.github.io/in-browser-markdown-editor/"
     }
   ]
