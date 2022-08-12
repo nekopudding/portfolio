@@ -22,10 +22,6 @@ jobs:
       run: |
         npm ci
         npm run build
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
