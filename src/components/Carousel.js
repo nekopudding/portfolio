@@ -34,22 +34,20 @@ function Carousel({
     track.style.transform = `translateX(${-trackWidth * currIndex}px)`; //makes sure transform is up to date
     setSlideWidth(trackWidth);
   }
-  const goToNextSlide = () => {
-    const track = document.querySelector(`.${styles.carouselTrack}`);
-    track.style.transform = `translateX(${-slideWidth * getNextIndex(currIndex)}px)`;
-    setCurrIndex(getNextIndex(currIndex))
-  }
-  const goToPrevSlide = () => {
-    const track = document.querySelector(`.${styles.carouselTrack}`);
-    track.style.transform = `translateX(${-slideWidth * getPrevIndex(currIndex)}px)`;
-    setCurrIndex(getPrevIndex(currIndex));
-  }
+
   const changeSlide = (index) => {
     const track = document.querySelector(`.${styles.carouselTrack}`);
     track.style.transform = `translateX(${-slideWidth * index}px)`;
     setCurrIndex(index);
   }
 
+  const goToNextSlide = () => {
+    changeSlide(getNextIndex(currIndex))
+  }
+  const goToPrevSlide = () => {
+    changeSlide(getPrevIndex(currIndex))
+  }
+  
   useEffect(() => {
     handleTrackResize();
     windowAnyResizeListener(handleTrackResize);
