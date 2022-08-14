@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Projects.module.css'
+import styles from './css/Projects.module.css'
 import { projectsSection } from '../assets/data/section-data'
 import Carousel from '../components/Carousel'
 

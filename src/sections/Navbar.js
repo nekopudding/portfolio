@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import React, { useEffect, useState } from 'react'
-import styles from './Navbar.module.css'
+import styles from './css/Navbar.module.css'
 import {ReactComponent as CloseIcon} from "../assets/icons/close.svg"
 import { windowResizeListener } from '../utils/windowResizeListener';
 

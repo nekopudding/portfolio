@@ -1,6 +1,6 @@
 import React from 'react'
 import { skillsSection } from '../assets/data/section-data'
-import styles from './Skills.module.css'
+import styles from './css/Skills.module.css'
 
 function Skills() {
   return (
