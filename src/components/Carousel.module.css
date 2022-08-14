@@ -2,11 +2,11 @@
   position: relative;
   padding: 0;
   margin: 0;
+  margin-bottom: 80px; /*space for indicators*/
 }
 .carouselTrack {
   overflow: visible;
   position: relative;
-  height: 600px;
   transition: transform 600ms cubic-bezier(.24,.64,.28,.99);
 }
 .slide {
@@ -26,8 +26,14 @@
 }
 
 .slideTitle {
-  margin-bottom: 28px;
+  margin-bottom: 12px;
   text-align: right;
+}
+.slideDate {
+  margin-bottom: 16px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 600;
 }
 .slideText {
   text-align: right;
@@ -38,6 +44,7 @@
 
 .imgContainer {
   flex: 0 0 45%;
+  max-height: 90%;
   overflow: hidden;
 }
 .img {
@@ -132,4 +139,15 @@
 }
 .link:active {
   opacity: 0.6;
+}
+
+@media only screen and (min-width: 1550px) {
+  .carouselTrack {
+    min-height: 700px;
+  }
+}
+@media only screen and (max-width: 1550px) {
+  .carouselTrack {
+    min-height: 800px;
+  }
 }

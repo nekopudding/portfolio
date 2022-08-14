@@ -31,6 +31,7 @@ function Carousel({
   const handleTrackResize = () => {
     const track = document.querySelector(`.${styles.carouselTrack}`);
     const trackWidth = track.getBoundingClientRect().width;
+    track.style.transform = `translateX(${-trackWidth * currIndex}px)`; //makes sure transform is up to date
     setSlideWidth(trackWidth);
   }
   const goToNextSlide = () => {
@@ -86,6 +87,7 @@ function Carousel({
             </div>
             <div>
               <h3 className={styles.slideTitle}>{s.title}</h3>
+              <h4 className={styles.slideDate}>{s.date}</h4>
               <div className={styles.slideText}>
                 {s.text.map(t => <p key={t}>{t}</p>)}
               </div>

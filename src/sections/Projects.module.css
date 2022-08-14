@@ -1,6 +1,8 @@
 .section {
   padding-top: 80px;
   margin-bottom: 164px;
+  max-width: 100%;
+  overflow: hidden;
 }
 .sectionTitle {
   text-align: right;
