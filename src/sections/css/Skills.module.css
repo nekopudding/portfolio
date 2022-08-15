@@ -18,9 +18,11 @@
 }
 
 .skillbarContainer {
-  padding-top: 86px;
-  height: 100%;
   flex: 0 0 484px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .skillbarContainer > * + * {

@@ -18,8 +18,6 @@ function Contact() {
     })
   }
 
-  const submitForm = () => undefined
-
   return (
     <>
       <section id="contact" className={styles.section}>
@@ -46,7 +44,7 @@ function Contact() {
             value={formData.message} onChange={handleInputChange} required
           />
           <div className={styles.buttonContainer}>
-            <button className={`button-filled ${styles.button}`} type="submit" onClick={submitForm}>Submit</button>
+            <button className={`button-filled ${styles.button}`} type="submit">Submit</button>
           </div>
         </form>
       </section>
