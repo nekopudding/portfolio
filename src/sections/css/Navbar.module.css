@@ -74,3 +74,9 @@
     display: inline-block;
   }
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    padding-bottom: 24px;
+  }
+}

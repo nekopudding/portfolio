@@ -74,7 +74,7 @@ function Carousel({
       `} onClick={goToNextSlide}><RightArrow/></button>
       <div className={styles.carouselTrack}>
         {slides.map((s,index) => 
-          <div key={s.id} className={`flex ${styles.slide}`} 
+          <div key={s.id} className={styles.slide} 
             css={css`
               left: ${slideWidth * index + 'px'};
               opacity: ${(index === currIndex) ? 1 : 0};

@@ -9,3 +9,22 @@
   margin-bottom: 28px;
 }
 
+@media (max-width: 1080px) {
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sectionTitle {
+    margin-right: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    padding-top: 56px;
+    margin-top: 64px;
+  }
+  .sectionTitle {
+    text-align: center;
+    margin-right: 0;
+  }
+}
