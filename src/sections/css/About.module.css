@@ -50,7 +50,6 @@
 @media (max-width: 1080px) {
   .container {
     height: auto;
-    flex-direction: column-reverse;
   }
   .imgContainer {
     position: absolute;

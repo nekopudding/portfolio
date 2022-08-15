@@ -5,6 +5,7 @@
 
 .container {
   position: relative;
+  display: flex;
 }
 .container > * + * {
   margin-left: 83px;
@@ -29,6 +30,8 @@
   margin-top: 64px;
 }
 .skillbar {
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
 }
 .skillbar > * + * {
@@ -56,3 +59,78 @@
   background-color: var(--red);
 }
 
+@media (max-width: 1080px) {
+  .sectionTitle {
+    margin-bottom: 24px;
+  }
+  .container {
+    flex-direction: column-reverse;
+  }
+  .container > * + * {
+    margin-left: 0;
+  }
+  .skillbarContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 80%;
+    margin-bottom: 40px;
+  }
+  .skillbarText {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .skillbarContainer > * + * {
+    margin-top: 24px;
+  }
+  .skillbar {
+    align-items: flex-start;
+  }
+  .bar {
+    height: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-top: 120px;
+    text-align: center;
+  }
+  .skillbarContainer {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .skillbarContainer > * + * {
+    margin-top: 0;
+    margin-left: 36px;
+  }
+  .skillbar {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .bar {
+    width: 24px;
+  }
+  .frontend {
+    height: 140px;
+  }
+  .reactJs {
+    height: 120px;
+  }
+  .backend {
+    height: 96px;
+  }
+  .testing {
+    height: 71px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skillbarText {
+    font-size: 16px;
+  }
+  .skillbarContainer > * + * {
+    margin-left: auto;
+  }
+}
