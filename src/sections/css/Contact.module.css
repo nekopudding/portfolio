@@ -1,6 +1,6 @@
 .section {
-  padding-top: 18px;
-  margin-top: 54px;
+  padding-top: 64px;
+  margin-top: 18px;
   margin-bottom: 144px;
 }
 .sectionTitle {
@@ -18,12 +18,20 @@
 .input {
   display: block;
   width: 100%;
+  padding: 8px 12px;
+  border-radius: 0;
+  border: 2px rgb(168, 168, 168) solid;
+  outline: none; /*disables blu border*/
+  resize: none; /*disable textarea resize*/
+}
+.input:focus-visible {
+  border: 2px black solid;
 }
 
 .buttonContainer {
   display: flex;
   justify-content: flex-end;
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 .button {
