@@ -25,6 +25,7 @@ function Contact() {
       <section id="contact" className={styles.section}>
         <h2 className={styles.sectionTitle}>Send Me A Message</h2>
         <form className={styles.form} 
+          target='_blank'
           action='https://formsubmit.co/6dba35be5750caf0540c007955da9c13'
           method='POST'
         >
