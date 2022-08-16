@@ -5,6 +5,7 @@ import {ReactComponent as LeftArrow} from '../assets/icons/left-arrow.svg'
 import {ReactComponent as RightArrow} from '../assets/icons/right-arrow.svg'
 import { css } from '@emotion/react'
 import { windowAnyResizeListener } from '../utils/windowResizeListener'
+import { useRef } from 'react'
 
 function Carousel({
   slides,
@@ -12,6 +13,7 @@ function Carousel({
 }) {
   const [slideWidth,setSlideWidth] = useState(0);
   const [currIndex,setCurrIndex] = useState(0);
+  const currIndexRef = useRef(0);
 
   const getNextIndex = (index) => {
     if (index >= (slides.length - 1)) {
@@ -31,7 +33,7 @@ function Carousel({
   const handleTrackResize = () => {
     const track = document.querySelector(`.${styles.carouselTrack}`);
     const trackWidth = track.getBoundingClientRect().width;
-    track.style.transform = `translateX(${-trackWidth * currIndex}px)`; //makes sure transform is up to date
+    track.style.transform = `translateX(${-trackWidth * currIndexRef.current}px)`; //makes sure transform is up to date
     setSlideWidth(trackWidth);
   }
 
@@ -39,19 +41,21 @@ function Carousel({
     const track = document.querySelector(`.${styles.carouselTrack}`);
     track.style.transform = `translateX(${-slideWidth * index}px)`;
     setCurrIndex(index);
+    currIndexRef.current = index;
   }
 
   const goToNextSlide = () => {
-    changeSlide(getNextIndex(currIndex))
+    changeSlide(getNextIndex(currIndex));
   }
   const goToPrevSlide = () => {
-    changeSlide(getPrevIndex(currIndex))
+    changeSlide(getPrevIndex(currIndex));
   }
   
   useEffect(() => {
     handleTrackResize();
     windowAnyResizeListener(handleTrackResize);
   },[])
+  
   useEffect(() => {
     if (autoScroll) {
       const interval = setInterval(goToNextSlide,8000)
@@ -102,7 +106,7 @@ function Carousel({
       <div className={styles.carouselNav}>
         {
           slides.map((s,index) => 
-            <div className={styles.ringOutline} onClick={()=>changeSlide(index)}>
+            <div key={s.id} className={styles.ringOutline} onClick={()=>changeSlide(index)}>
               <div className={`${styles.slideIndicator} ${index === currIndex && styles.slideIndicatorCurr}`} />
             </div>
           ) 
