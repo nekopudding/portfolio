@@ -157,6 +157,9 @@
 }
 
 @media (max-width: 1080px) {
+  .carousel {
+    margin-bottom: 0;
+  }
   .slide {
     border-left: none;
     border-right: none;

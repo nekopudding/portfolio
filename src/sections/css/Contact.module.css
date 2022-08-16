@@ -1,6 +1,6 @@
 .section {
   padding-top: 64px;
-  margin-top: 18px;
+  margin-top: 80px;
   margin-bottom: 144px;
 }
 .sectionTitle {
@@ -36,4 +36,20 @@
 
 .button {
   margin-left: auto;
+}
+@media (max-width: 1080px) {
+  .form {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    padding-top: 56px;
+  }
+  .form {
+    width: 100%;
+  }
+  .button {
+    margin-right: auto;
+  }
 }

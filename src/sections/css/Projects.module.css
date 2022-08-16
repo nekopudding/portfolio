@@ -13,6 +13,7 @@
   .section {
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 0;
   }
   .sectionTitle {
     margin-right: 120px;
