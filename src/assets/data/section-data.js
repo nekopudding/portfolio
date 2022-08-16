@@ -101,4 +101,8 @@ const projectsSection = {
   ]
 }
 
-export {aboutSection,skillsSection,projectsSection}
+const contactSection = {
+  id: "contact"
+}
+
+export {aboutSection,skillsSection,projectsSection,contactSection}

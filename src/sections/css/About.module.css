@@ -112,3 +112,28 @@
     font-size: 16px;
   }
 }
+
+/****************** ANIMATIONS ******************/
+@keyframes slideInFromTop {
+  40% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+.sectionTitle {
+  transform: translateY(-200px);
+  opacity: 0;
+  animation: 0.7s cubic-bezier(.42,1.49,.65,1.13) 0s 1 slideInFromTop forwards;
+}
+.sectionText,.buttonContainer {
+  opacity: 0;
+  animation: 1.5s ease 0.5s 1 fadeIn forwards;
+}

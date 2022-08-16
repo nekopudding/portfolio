@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { contactSection } from '../assets/data/section-data'
 import styles from './css/Contact.module.css'
 
 function Contact() {
@@ -20,7 +21,7 @@ function Contact() {
 
   return (
     <>
-      <section id="contact" className={styles.section}>
+      <section id={contactSection.id} className={styles.section}>
         <h2 className={styles.sectionTitle}>Send Me A Message</h2>
         <form className={styles.form} 
           target='_blank'

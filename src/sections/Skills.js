@@ -3,8 +3,21 @@ import { css } from '@emotion/react';
 import React from 'react'
 import { skillsSection } from '../assets/data/section-data'
 import styles from './css/Skills.module.css'
+import { useEffect } from 'react'
+import { addClass, elementIsInView } from '../utils/scrollEffects'
 
 function Skills() {
+  const animateOnScroll = () => {
+    const sectionHeight = document.getElementById(skillsSection.id).getBoundingClientRect().height;
+    if(elementIsInView(styles.sectionTitle, sectionHeight)) {
+      addClass(styles.sectionTitle,styles.inView);
+      addClass(styles.sectionText,styles.inView);
+    }
+  }
+  useEffect(()=> {
+    animateOnScroll();
+    window.addEventListener('scroll', animateOnScroll)
+  },[])
   return (
     <>
       <section id={skillsSection.id} className={styles.section}>
