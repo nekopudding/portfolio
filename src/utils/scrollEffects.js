@@ -1,7 +1,3 @@
-export const fadeIn = () => {
-
-}
-
 /**
  * 
  * @param {*} elementClass - className
@@ -18,16 +14,28 @@ export const elementIsInView = (elementClass, offsetY = 0) => {
   }
 }
 
-export const addClass = (elementClass, classToAdd) => {
-  const elem = document.getElementsByClassName(elementClass)[0];
-  if (elem) {
-    elem.classList.add(classToAdd);
-  } else {
-    console.error(`element ${elementClass} not found`);
+/**
+ * Add class to all elements with the matching elementClass
+ * @param {*} elementClass 
+ * @param {*} classToAdd 
+ * @param {*} delay - delay in ms
+ */
+export const addClass = (elementClass, classToAdd, delay = 0) => {
+  const elems = document.getElementsByClassName(elementClass);
+  if (!elems || elems.length === 0) {
+    return console.error(`no elements found for ${elementClass}`);
   }
+  elems[0].classList.add(classToAdd);
+  delayAddClass(elems,1,classToAdd,delay);
 }
 
+const delayAddClass = (elems,index,classToAdd,delay) => {
+  setTimeout(() => {
+    if (!elems[index]) return; 
 
-export const addClassToElements = (elementClass,classToAdd,delay = 0) => {
-
+    elems[index].classList.add(classToAdd);
+    if (index + 1 <= elems.length - 1) {
+      delayAddClass(elems,index + 1,classToAdd,delay);
+    }
+  },delay)
 }

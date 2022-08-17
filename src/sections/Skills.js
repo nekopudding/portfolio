@@ -8,10 +8,11 @@ import { addClass, elementIsInView } from '../utils/scrollEffects'
 
 function Skills() {
   const animateOnScroll = () => {
+    
     const sectionHeight = document.getElementById(skillsSection.id).getBoundingClientRect().height;
-    if(elementIsInView(styles.sectionTitle, sectionHeight)) {
+    if(elementIsInView(styles.section, sectionHeight)) {
       addClass(styles.sectionTitle,styles.inView);
-      addClass(styles.sectionText,styles.inView);
+      addClass(styles.sectionText,styles.inView, 3000);
     }
   }
   useEffect(()=> {
