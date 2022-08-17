@@ -1,37 +1,42 @@
 /**
  * 
- * @param {*} elementClass - className
- * @param {*} offsetY - how must it must exceed the top of viewport to  be considered in view
+ * @param {*} elem
+ * @param {*} offsetY - offset from bottom of viewport to be considered in view
  */
-export const elementIsInView = (elementClass, offsetY = 0) => {
-  const elem = document.getElementsByClassName(elementClass)[0];
+export const elementIsInView = (elem, offsetY = 0) => {
   if (elem) {
     const elemTop = elem.getBoundingClientRect().top;
+    console.log(elemTop)
     return elemTop < window.innerHeight - offsetY;
   } else {
-    console.error(`element ${elementClass} not found`);
+    console.error(`element not found`);
     return false;
   }
 }
 
 /**
- * Add class to all elements with the matching elementClass
- * @param {*} elementClass 
+ * Add class to a collection of elements
+ * @param {*} elems - HTMLCollection of elements
  * @param {*} classToAdd 
- * @param {*} delay - delay in ms
+ * @param {*} initialDelay
+ * @param {*} delayBetweenElements - delay in ms
  */
-export const addClass = (elementClass, classToAdd, delay = 0) => {
-  const elems = document.getElementsByClassName(elementClass);
+export const addClass = (elems, classToAdd, initialDelay = 0, delayBetweenElements = 0) => {
   if (!elems || elems.length === 0) {
-    return console.error(`no elements found for ${elementClass}`);
+    return console.error(`no valid elems found`);
   }
-  elems[0].classList.add(classToAdd);
-  delayAddClass(elems,1,classToAdd,delay);
+
+  setTimeout(() => {
+    if (elems[0] && !elems[0].classList.contains(classToAdd)) {
+      elems[0].classList.add(classToAdd);
+    }
+    delayAddClass(elems,1,classToAdd,delayBetweenElements);
+  },initialDelay)
 }
 
 const delayAddClass = (elems,index,classToAdd,delay) => {
   setTimeout(() => {
-    if (!elems[index]) return; 
+    if (!elems[index] || elems[index].classList.contains(classToAdd)) return; 
 
     elems[index].classList.add(classToAdd);
     if (index + 1 <= elems.length - 1) {

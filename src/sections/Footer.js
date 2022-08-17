@@ -10,7 +10,7 @@ function Footer() {
         <a href="https://github.com/nekopudding" target="_blank" rel="noopener noreferrer">Github</a>
         <a href="https://discordapp.com/users/%E7%8C%AB%E3%81%95%E3%82%93#4190" target="_blank" rel="noopener noreferrer">Discord</a>
       </div>
-      <div className={styles.copyright}>© Dean Yang 2022</div>
+      <div className={styles.copyright}>© Created by Dean 2022</div>
     </section>
       
     </>

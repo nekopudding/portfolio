@@ -1,8 +1,22 @@
 import React from 'react'
 import styles from './css/About.module.css'
 import { aboutSection } from '../assets/data/section-data'
+import { useEffect } from 'react';
+import { addClass, elementIsInView } from '../utils/scrollEffects';
 
 function About() {
+  const animate = () => {
+    const sectionTitle = document.getElementsByClassName(styles.sectionTitle);
+    const sectionTextArray = document.getElementsByClassName(styles.sectionText)[0].children;
+    const button = document.getElementsByClassName(styles.buttonContainer);
+    
+    addClass(sectionTitle,styles.inView);
+    addClass(sectionTextArray,styles.inView,300,200);
+    addClass(button, styles.inView,900)
+  }
+  useEffect(()=> {
+    animate();
+  },[])
   return (
     <>
     <section id={aboutSection.id} className={styles.section}>

@@ -158,11 +158,11 @@
   opacity: 0;
 }
 .sectionTitle.inView {
-  animation: 0.7s cubic-bezier(.42,1.49,.65,1.13) 0s 1 slideInFromTop forwards;
+  animation: 0.5s cubic-bezier(.42,1.49,.65,1.13) 1 slideInFromTop forwards;
 }
-.sectionText {
+.sectionText > * {
   opacity: 0;
 }
-.sectionText.inView {
-  animation: 1.5s ease 0.5s 1 fadeIn forwards;
+.sectionText > *.inView {
+  animation: 1.5s ease 1 fadeIn forwards;
 }

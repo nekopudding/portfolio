@@ -22,7 +22,7 @@ const skillsSection = {
   title: "Skills",
   text: [
     "I began my journey in web development two years ago. I’ve implmented the designs created by numerous people and created designs for my own websites.",
-    "I create websites that are fast, responsive, and intuitive to use. My main area of expertise are HTML, CSS, and React JS.",
+    "I create websites that are fast, responsive, and intuitive to use. My main area of expertise are HTML, CSS, and ReactJS.",
     "I’ve also had experience working server-side using Node JS, MongoDB, and testing using tools such as Jest, Github Actions for continous integration, and JMeter for performance testing."
   ]
 }

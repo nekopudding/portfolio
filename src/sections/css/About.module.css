@@ -131,9 +131,13 @@
 .sectionTitle {
   transform: translateY(-200px);
   opacity: 0;
-  animation: 0.7s cubic-bezier(.42,1.49,.65,1.13) 0s 1 slideInFromTop forwards;
 }
-.sectionText,.buttonContainer {
+.sectionTitle.inView {
+  animation: 0.5s cubic-bezier(.42,1.49,.65,1.13) 1 slideInFromTop forwards;
+}
+.sectionText > *, .buttonContainer {
   opacity: 0;
-  animation: 1.5s ease 0.5s 1 fadeIn forwards;
+}
+.sectionText > *.inView, .buttonContainer.inView {
+  animation: 1.5s ease 1 fadeIn forwards;
 }
