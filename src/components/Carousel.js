@@ -87,7 +87,7 @@ function Carousel({
             <div className={styles.imgContainer}>
               <img className={styles.img} src={s.image} alt={s.title} />
             </div>
-            <div>
+            <div className={styles.slideData}>
               <h3 className={styles.slideTitle}>{s.title}</h3>
               <h4 className={styles.slideDate}>{s.date}</h4>
               <div className={styles.slideText}>

@@ -48,7 +48,7 @@ const projectsSection = {
       date: 'May-Aug 2022',
       text: [
         "Accountability is a personal financing app created in the CPEN 321 project course. The app was created with a NodeJS backend, MongoDB database, and an Android Java frontend. We landed a 5th place competing with other project groups.",
-        "The app supports real-time messaging using SocketIO, setting financial goals, transactions, and creating of monthly reports based on the month's income/spendings. I was in charge of coding and testing the backend server. I used testing tools like Jest, Supertest, Codacy and implemented the CI/CD pipeline using Github Actions."
+        "The app supports real-time messaging using SocketIO, setting financial goals, transactions, and creating monthly reports based on the month's income/spendings. I was in charge of coding and testing the backend server. I used testing tools like Jest, Supertest, Codacy and implemented the CI/CD pipeline using Github Actions."
       ],
       image: accountability,
       link: "https://github.com/CPEN321-Group/accountability-core"

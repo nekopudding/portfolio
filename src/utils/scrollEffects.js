@@ -6,7 +6,6 @@
 export const elementIsInView = (elem, offsetY = 0) => {
   if (elem) {
     const elemTop = elem.getBoundingClientRect().top;
-    console.log(elemTop)
     return elemTop < window.innerHeight - offsetY;
   } else {
     console.error(`element not found`);
