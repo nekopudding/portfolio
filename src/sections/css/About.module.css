@@ -96,7 +96,8 @@
     text-align: center;
   }
   .textBlock {
-    padding-right: 24px;
+    padding-right: 0;
+    padding-left: 0;
   }
   
   .buttonContainer {

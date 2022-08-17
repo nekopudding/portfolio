@@ -36,7 +36,7 @@ const projectsSection = {
       title: "Photosnap Multi-page Website",
       date: 'Jun 2022',
       text: [
-        "Photosnap is a multi-page website created using React, React Router, MUI Components Library. It was done using the design from Frontend-Mentor's \"Photosnap Multi-Page Website\" Challenge.",
+        "Photosnap is a multi-page website created using React, React Router, and the MUI Components Library. It was done using the design from Frontend-Mentor's \"Photosnap Multi-Page Website\" Challenge.",
         "This website is fully responsive from mobile to desktop screen sizes. I chose to complete this challenge because it does not use material design (rounded borders, icons, \"mobile app\" look) which I was used to implementing. It uses simple yet elegant animations and helped me expand my knowledge of different modern website styles."
       ],
       image: photosnap,

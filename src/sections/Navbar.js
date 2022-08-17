@@ -11,6 +11,15 @@ function Navbar() {
   const openMenu = () => setMenuOpen(true);
 
   useEffect(() => windowResizeListener(closeMenu),[])
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    if (menuOpen) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'visible';
+    }
+  },[menuOpen])
   
   return (
     <>
@@ -26,9 +35,10 @@ function Navbar() {
           <div onClick={openMenu} className={styles.menuButton}><div className={styles.menuIcon} /></div>
           :
           <div className={styles.closeButton}>
-            <CloseIcon width='100%' height='auto' onClick={closeMenu}/>
+            <CloseIcon onClick={closeMenu}/>
           </div>
         }
+        
         <div className={styles.menu} css={css`
           display: ${menuOpen ? 'flex' : 'none'};
         `}>
@@ -38,8 +48,13 @@ function Navbar() {
             <a href="#projects" onClick={closeMenu}>Projects</a>
             <a href="#contact" onClick={closeMenu} >Contact</a>
           </div>
-      </div>
+        </div>
       </section>
+      <div className={styles.menuTint} css={css`
+        height: ${document.body.scrollHeight}px;
+        pointer-events: ${menuOpen ? 'auto' : 'none'};
+        opacity: ${menuOpen ? 1 : 0};
+      `}/>
     </>
   )
 }
