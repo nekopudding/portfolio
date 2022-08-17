@@ -153,6 +153,16 @@
     opacity: 1;
   }
 }
+@keyframes scaleX {
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes scaleY {
+  100% {
+    transform: scaleY(1);
+  }
+}
 .sectionTitle {
   transform: translateY(-200px);
   opacity: 0;
@@ -165,4 +175,32 @@
 }
 .sectionText > *.inView {
   animation: 1.5s ease 1 fadeIn forwards;
+}
+.skillbarText {
+  opacity: 0;
+}
+.skillbarText.inView {
+  animation: 1.5s ease 1 fadeIn forwards;
+}
+.bar {
+  transform-origin: right;
+  transform: scaleX(0);
+}
+.bar.inView {
+  animation: 0.8s cubic-bezier(.19,.5,.48,1.04) 1 scaleX forwards;
+}
+@media (max-width: 1080px) {
+  .bar {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+@media (max-width: 600px) {
+  .bar {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+  .bar.inView {
+    animation: 0.4s cubic-bezier(.19,.5,.48,1.04) 1 scaleY forwards;
+  }
 }

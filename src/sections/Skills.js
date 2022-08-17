@@ -14,9 +14,13 @@ function Skills() {
     if(elementIsInView(section, sectionHeight/2)) {
       const sectionTitle = document.getElementsByClassName(styles.sectionTitle);
       const sectionTextArray = document.getElementsByClassName(styles.sectionText)[0].children;
+      const skillbarText = document.getElementsByClassName(styles.skillbarText);
+      const skillbarBar = document.getElementsByClassName(styles.bar);
       
       addClass(sectionTitle,styles.inView);
-      addClass(sectionTextArray,styles.inView,300,200);
+      addClass(sectionTextArray,styles.inView,300,200); //900
+      addClass(skillbarText,styles.inView,900,200); //1700
+      addClass(skillbarBar,styles.inView,2000,100);
     }
   }
   useEffect(()=> {
