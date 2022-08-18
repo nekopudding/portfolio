@@ -13,9 +13,9 @@ export const elementIsInView = (elem, offsetY = 0) => {
   }
 }
 
-export const translateYByDistFromViewportTop = (elem,multiplier = 0) => {
-  const elemTop = elem.getBoundingClientRect().top;
-  elem.style.transform = `translateY(${-multiplier * elemTop}px)`;
+export const translateYByDistFromViewportTop = (container, elem,multiplier = 0) => {
+  const containerTop = container.getBoundingClientRect().top;
+  elem.style.transform = `translateY(${-multiplier * containerTop}px)`;
 }
 
 /**

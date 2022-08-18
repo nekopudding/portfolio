@@ -15,8 +15,9 @@ function About() {
     addClass(button, styles.inView,900);
   }
   const parallaxImg = () => {
-    const img = document.getElementsByClassName(styles.img)[0];
-    translateYByDistFromViewportTop(img,0.4);
+    const imgContainer = document.getElementsByClassName(styles.imgContainer)[0];
+    const img = imgContainer.children[0];
+    translateYByDistFromViewportTop(imgContainer,img,0.4);
   }
   useEffect(()=> {
     animate();
