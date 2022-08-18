@@ -13,6 +13,11 @@ export const elementIsInView = (elem, offsetY = 0) => {
   }
 }
 
+export const translateYByDistFromViewportTop = (elem,multiplier = 0) => {
+  const elemTop = elem.getBoundingClientRect().top;
+  elem.style.transform = `translateY(${-multiplier * elemTop}px)`;
+}
+
 /**
  * Add class to a collection of elements
  * @param {*} elems - HTMLCollection of elements
