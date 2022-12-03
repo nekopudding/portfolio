@@ -30,6 +30,7 @@ function Navbar() {
           <a href="#skills" >Skills</a>
           <a href="#projects" >Projects</a>
           <a href="#contact" >Contact</a>
+          <a href="https://nekopudding6.ca/engineering/">Blog</a>
         </div>
         {!menuOpen ?
           <div onClick={openMenu} className={styles.menuButton}><div className={styles.menuIcon} /></div>
@@ -47,6 +48,7 @@ function Navbar() {
             <a href="#skills" onClick={closeMenu}>Skills</a>
             <a href="#projects" onClick={closeMenu}>Projects</a>
             <a href="#contact" onClick={closeMenu} >Contact</a>
+            <a href="https://nekopudding6.ca/engineering/" onClick={closeMenu}>Blog</a>
           </div>
         </div>
       </section>
