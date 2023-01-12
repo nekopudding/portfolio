@@ -6,6 +6,7 @@ import commentsSection from '../images/comments-section.png'
 import accountability from '../images/accountability.png'
 import lounge from '../images/nekos-lounge.png'
 import twadder from '../images/twadder.png'
+import headsUp from '../images/heads-up.gif'
 
 const aboutSection = {
   id: "about",
@@ -43,6 +44,19 @@ const projectsSection = {
       ],
       image: twadder,
       link: 'https://twadder-b2796.firebaseapp.com/'
+    },
+    {
+      id: 'heads-up',
+      title: 'Heads Up!',
+      date: 'Sept 2022 - Ongoing',
+      text: [
+        `"Heads Up!" was originally an app prototype developed as part of CPEN 441 which is an HCI design course.`,
+        `It is a reminders app that hopes to eliminate the problem of cramming by providing students with automatic reminders of upcoming tasks
+        at appropriate times before the deadline.`,
+        `While the practical application of this concept was not proven, I implemented the app in React Native as part of my exploration in mobile development.`
+      ],
+      image: headsUp,
+      link: 'https://github.com/nekopudding-org/heads-up'
     },
     {
       id: "photosnap",
