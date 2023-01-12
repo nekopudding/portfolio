@@ -43,7 +43,8 @@ const projectsSection = {
         "Similar styling to Twitter is achieved through analysing Twitter's CSS and establishing reusable themes using SASS.",
       ],
       image: twadder,
-      link: 'https://twadder-b2796.firebaseapp.com/'
+      demolink: 'https://twadder-b2796.firebaseapp.com/',
+      codelink: 'https://github.com/nekopudding-org/twadder'
     },
     {
       id: 'heads-up',
@@ -56,7 +57,7 @@ const projectsSection = {
         `While the practical application of this concept was not proven, I implemented the app in React Native as part of my exploration in mobile development.`
       ],
       image: headsUp,
-      link: 'https://github.com/nekopudding-org/heads-up'
+      codelink: 'https://github.com/nekopudding-org/heads-up'
     },
     {
       id: "photosnap",
@@ -67,7 +68,7 @@ const projectsSection = {
         "This website is fully responsive from mobile to desktop screen sizes. I chose to complete this challenge because it does not use material design (rounded borders, icons, \"mobile app\" look) which I was used to implementing. It uses simple yet elegant animations and helped me expand my knowledge of different modern website styles."
       ],
       image: photosnap,
-      link: "https://nekopudding.github.io/photosnap-multi-page-website/"
+      demolink: "https://nekopudding.github.io/photosnap-multi-page-website/",
     },
     {
       id: "accountability",
@@ -78,7 +79,7 @@ const projectsSection = {
         "The app supports real-time messaging using SocketIO, setting financial goals, transactions, and creating monthly reports based on the month's income/spendings. I was in charge of coding and testing the backend server. I used testing tools like Jest, Supertest, Codacy and implemented the CI/CD pipeline using Github Actions."
       ],
       image: accountability,
-      link: "https://github.com/CPEN321-Group/accountability-core"
+      codelink: "https://github.com/CPEN321-Group/accountability-core"
     },
     {
       id: "markdown",
@@ -89,7 +90,7 @@ const projectsSection = {
         "This markdown editor supports live preview of edits and uses localStorage to save documents locally in the browser. There is also an option to switch between light and dark theme."
       ],
       image: markdown,
-      link: "https://nekopudding.github.io/in-browser-markdown-editor/"
+      demolink: "https://nekopudding.github.io/in-browser-markdown-editor/"
     },
     {
       id: "comments-section",
@@ -100,7 +101,7 @@ const projectsSection = {
         "There are 4 preset users you can use (chosen in the appbar), each with their own upvotes/downvotes. Each user can reply to comments by other people and can only edit/delete their own comment."
       ],
       image: commentsSection,
-      link: "https://nekopudding.github.io/interactive-comments-section/"
+      demolink: "https://nekopudding.github.io/interactive-comments-section/"
     },
     {
       id: "mnemosyne",
@@ -111,7 +112,7 @@ const projectsSection = {
         "As an astronaut, you navigate through the dangerous surroundings with the use of grappling hooks and travel through an unfamiliar planet. You must rebuild your spaceship and piece together your missing memories to uncover the mysteries behind your missing crewmates."
       ],
       image: mnemosyne,
-      link: "https://github.com/avalon-games/spacegame"
+      codelink: "https://github.com/avalon-games/spacegame"
     },
     {
       id: "lounge",
@@ -123,7 +124,8 @@ const projectsSection = {
         "In the future I plan to implement a log-in system, notifications, live chat, and a video calling service. I will also revise my design as I continue to improve my skills.",
       ],
       image: lounge,
-      link: "https://nekopudding-org.github.io/nekos-lounge/"
+      demolink: "https://nekopudding-org.github.io/nekos-lounge/",
+      codelink: "https://github.com/nekopudding-org/nekos-lounge"
     }
   ]
 }

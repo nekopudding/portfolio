@@ -94,9 +94,9 @@ function Carousel({
                 {s.text.map(t => <p key={t}>{t}</p>)}
               </div>
               {
-                s.link &&
                 <div className={styles.linkContainer}>
-                  <a className={styles.link} href={s.link} target="_blank" rel="noopener noreferrer">View Project</a>
+                  {s.codelink && <a className={styles.link} href={s.codelink} target="_blank" rel="noopener noreferrer">View Code</a>}
+                  {s.demolink && <a className={styles.link} href={s.demolink} target="_blank" rel="noopener noreferrer">View Demo</a>}
                 </div>
               }
             </div>

@@ -133,6 +133,9 @@
   display: flex;
   justify-content: flex-end;
 }
+.linkContainer > * + * {
+  margin-left: 16px;
+}
 .link {
   font-size: 18px;
   font-weight: 700;
