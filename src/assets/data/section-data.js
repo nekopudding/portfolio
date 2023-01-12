@@ -5,6 +5,7 @@ import photosnap from '../images/photosnap.png'
 import commentsSection from '../images/comments-section.png'
 import accountability from '../images/accountability.png'
 import lounge from '../images/nekos-lounge.png'
+import twadder from '../images/twadder.png'
 
 const aboutSection = {
   id: "about",
@@ -31,6 +32,18 @@ const projectsSection = {
   id: "projects",
   title: "Projects",
   projects: [
+    {
+      id: 'twadder',
+      title: 'Twadder (Twitter Clone)',
+      date: 'Aug 2022 - Ongoing',
+      text: [
+        "Twadder is a functional Twitter clone built with React, SASS, Reduct, React Router in the frontend, and Mongoose, Express, Firebase in the backend.",
+        "It currently supports persistent storage of posts, images, and account registration. Real time messaging is currently being worked on.",
+        "Similar styling to Twitter is achieved through analysing Twitter's CSS and establishing reusable themes using SASS.",
+      ],
+      image: twadder,
+      link: 'https://twadder-b2796.firebaseapp.com/'
+    },
     {
       id: "photosnap",
       title: "Photosnap Multi-page Website",
