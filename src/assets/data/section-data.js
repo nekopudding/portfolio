@@ -44,7 +44,7 @@ const projectsSection = {
       ],
       image: twadder,
       demolink: 'https://twadder-b2796.firebaseapp.com/',
-      codelink: 'https://github.com/nekopudding-org/twadder'
+      codelink: 'https://github.com/nekopudding/twadder'
     },
     {
       id: 'heads-up',
@@ -57,7 +57,7 @@ const projectsSection = {
         `While the practical application of this concept was not proven, I implemented the app in React Native as part of my exploration in mobile development.`
       ],
       image: headsUp,
-      codelink: 'https://github.com/nekopudding-org/heads-up'
+      codelink: 'https://github.com/nekopudding/heads-up'
     },
     {
       id: "photosnap",
@@ -124,8 +124,8 @@ const projectsSection = {
         "In the future I plan to implement a log-in system, notifications, live chat, and a video calling service. I will also revise my design as I continue to improve my skills.",
       ],
       image: lounge,
-      demolink: "https://nekopudding-org.github.io/nekos-lounge/",
-      codelink: "https://github.com/nekopudding-org/nekos-lounge"
+      demolink: "https://nekopudding.github.io/nekos-lounge/",
+      codelink: "https://github.com/nekopudding/nekos-lounge"
     }
   ]
 }

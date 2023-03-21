@@ -30,7 +30,7 @@ function Contact() {
         >
           <input type="hidden" name="_autoresponse" value="Thank you for contacting me! I will get back to you soon."/>
           <input type="hidden" name="_subject" value={formData.subject}/>
-          <input type="hidden" name="_next" value="https://nekopudding-org.github.io/portfolio"/>
+          <input type="hidden" name="_next" value="https://nekopudding.github.io/portfolio"/>
 
           <input className={styles.input} type="text" placeholder='Name' name='name'
             value={formData.name} onChange={handleInputChange} required

@@ -1,1 +1,1 @@
-site live [here](https://nekopudding-org.github.io/portfolio/)
+site live [here](https://nekopudding.github.io/portfolio/)
