@@ -38,6 +38,19 @@
   font-size: 18px;
   font-weight: 600;
 }
+.tagContainer {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.tag {
+  background-color: #cbcbcb;
+  border-radius: 9999px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
 .slideText {
   text-align: right;
 }
@@ -205,7 +218,7 @@
 
 @media (max-width: 600px) {
   .carouselTrack {
-    min-height: 750px;
+    min-height: 900px;
   }
   .slideTitle,.slideDate,.slideText {
     text-align: center;
@@ -242,5 +255,11 @@
   .slideData {
     background: linear-gradient(to top, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.075) 40%, rgba(255, 255, 255, 0) 100%);
     padding: 16px 12px;
+  }
+  .tagContainer {
+    justify-content: center;
+  }
+  .tag {
+    font-size: 11px;
   }
 }

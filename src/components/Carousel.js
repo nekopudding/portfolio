@@ -111,6 +111,9 @@ function handleTouchEnd() {
             <div className={styles.slideData}>
               <h3 className={styles.slideTitle}>{s.title}</h3>
               <h4 className={styles.slideDate}>{s.date}</h4>
+              <div className={styles.tagContainer}>
+                {s.tags.map(t => <div key={t} className={styles.tag}>{t}</div>)}
+              </div>
               <div className={styles.slideText}>
                 {s.text.map(t => <p key={t}>{t}</p>)}
               </div>
