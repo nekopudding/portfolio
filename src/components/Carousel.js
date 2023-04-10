@@ -13,6 +13,8 @@ function Carousel({
 }) {
   const [slideWidth,setSlideWidth] = useState(0);
   const [currIndex,setCurrIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const currIndexRef = useRef(0);
 
   const getNextIndex = (index) => {
@@ -50,6 +52,25 @@ function Carousel({
   const goToPrevSlide = () => {
     changeSlide(getPrevIndex(currIndex));
   }
+
+function handleTouchStart(e) {
+    setTouchStart(e.targetTouches[0].clientX);
+}
+
+function handleTouchMove(e) {
+    setTouchEnd(e.targetTouches[0].clientX);
+}
+
+function handleTouchEnd() {
+    if (slideWidth > 600) return;
+    if (touchStart - touchEnd > 150) {
+        goToNextSlide();
+    }
+
+    if (touchStart - touchEnd < -150) {
+        goToPrevSlide();
+    }
+}
   
   useEffect(() => {
     handleTrackResize();
@@ -65,7 +86,7 @@ function Carousel({
 
   return (
     <>
-    <div className={styles.carousel}>
+    <div className={styles.carousel} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
       <button className={`
         ${styles.arrow} 
         ${styles.arrowLeft} 

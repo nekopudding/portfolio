@@ -5,6 +5,33 @@ import styles from './css/Navbar.module.css'
 import {ReactComponent as CloseIcon} from "../assets/icons/close.svg"
 import { windowResizeListener } from '../utils/windowResizeListener';
 
+const links = [
+  {
+    title:'About',
+    url: '#about'
+  },
+  {
+    title:'Skills',
+    url: '#skills'
+  },
+  {
+    title:'Projects',
+    url: '#projects'
+  },
+  {
+    title:'Contact',
+    url: '#contact'
+  },
+  {
+    title:'Blog',
+    url: 'https://nekopudding6.ca/engineering/'
+  },
+  {
+    title:'Resume',
+    url: 'https://nekopudding.github.io/resume/resume2.html'
+  },
+]
+
 function Navbar() {
   const [menuOpen,setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
@@ -26,11 +53,7 @@ function Navbar() {
       <section className={`flex ${styles.navbar}`}>
         <h1>Dean Yang</h1>
         <div className={`flex ${styles.navbarLinks}`}>
-          <a href="#about" >About</a>
-          <a href="#skills" >Skills</a>
-          <a href="#projects" >Projects</a>
-          <a href="#contact" >Contact</a>
-          <a href="https://nekopudding6.ca/engineering/">Blog</a>
+          {links.map(l => <a key={l.title} href={l.url} onClick={closeMenu}>{l.title}</a>)}
         </div>
         {!menuOpen ?
           <div onClick={openMenu} className={styles.menuButton}><div className={styles.menuIcon} /></div>
@@ -44,11 +67,7 @@ function Navbar() {
           display: ${menuOpen ? 'flex' : 'none'};
         `}>
           <div className={`stack ${styles.menuLinks}`}>
-            <a href="#about" onClick={closeMenu}>About</a>
-            <a href="#skills" onClick={closeMenu}>Skills</a>
-            <a href="#projects" onClick={closeMenu}>Projects</a>
-            <a href="#contact" onClick={closeMenu} >Contact</a>
-            <a href="https://nekopudding6.ca/engineering/" onClick={closeMenu}>Blog</a>
+            {links.map(l => <a key={l.title} href={l.url} onClick={closeMenu}>{l.title}</a>)}
           </div>
         </div>
       </section>
